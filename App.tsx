@@ -65,6 +65,34 @@ const App = () => {
       if (contact) {
         console.log('Contact Number:', contact[0]);
       }
+
+      // Check for designation pattern
+      const designationRegex = /\b(Manager|Director|Engineer)\b/i;
+      const designation = value.match(designationRegex);
+      if (designation) {
+        console.log('Designation:', designation[0]);
+      }
+
+      // Check for department pattern
+      const departmentRegex = /\b(IT|HR|Sales)\b/i;
+      const department = value.match(departmentRegex);
+      if (department) {
+        console.log('Department:', department[0]);
+      }
+
+      // Check for address pattern
+      const addressRegex = /\b\d+\s[A-Za-z]+\s[A-Za-z]+\b/;
+      const address = value.match(addressRegex);
+      if (address) {
+        console.log('Address:', address[0]);
+      }
+
+      // Check for WhatsApp number pattern
+      const whatsappRegex = /\b(\+\d{2})?\d{10}\b/;
+      const whatsapp = value.match(whatsappRegex);
+      if (whatsapp) {
+        console.log('WhatsApp Number:', whatsapp[0]);
+      }
     });
   };
 
